@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @problem.user.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @problem.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @problem.description %>
+</p>
+
+<!-- <p>
+  <b>Requires skills:</b>
+  <%= @problem.requires_skills %>
+</p> -->
+<% if current_user == (@problem.user) %>
+<!-- show voting results -->
+results
+<% else %>
+<!-- Show voting form -->
+<%= render 'shared/voting_form' %>	
+
+<% end %>
+
+
+<!--
+<%= link_to 'Edit', edit_problem_path(@problem) %> |
+<%= link_to 'Back', problems_path %>
+
+-->

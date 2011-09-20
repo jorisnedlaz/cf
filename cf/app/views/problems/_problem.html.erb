@@ -1,0 +1,26 @@
+<tr>
+  <td class="micropost">
+    <span class="content"><b>
+	
+	<%= link_to problem.title, problem %>
+	</b></span>
+	<p><i><%= truncate(problem.description, :length => 90) %></i></p>
+	
+	
+	
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(problem.created_at) %> ago.
+    </span>
+  </td>
+<% user = problem.user rescue User.find(problem.user_id) %>
+<% if current_user?(user) %>
+
+  <td>
+    <%= link_to "delete", problem, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => problem.title %>
+  </td>
+</td>
+  <% end %>
+</tr>
+

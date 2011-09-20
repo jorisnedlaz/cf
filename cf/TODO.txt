@@ -1,0 +1,14 @@
+- Make Problem feed on home page. Only other users' Problems should be shown and clickable (to Vote -> insert Vote in database).
+
+- (Check) Create Problem. Form for user.
+	- (Check) Create form for Problem Solutions.
+
+- Create relationships with Skills table. Users have Skills, Problems require Skills.
+
+- Create view of Votes per Problem. In nice chart or pie graph. Or both. ;-)
+
+- Create Problem only accessible after n Votes have been cast. Make nice countdown in sidebar ('n Votes left until you can create a new Problem')
+
+- Create 'Viewed' table. Don't let a user see the same problem twice.
+
+- Implement Helpfulness: users can mark Votes as Helpful. Most Helpful users are mentioned on home page (Top 10-ish).
